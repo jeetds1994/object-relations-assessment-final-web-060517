@@ -63,7 +63,7 @@ class Movie
   end
 
   def ratings
-    Rating.all.find_all{|obj| obj.movie.title = self}
+    Rating.all.find_all{|obj| obj.movie == self}
   end
 
   def viewers
